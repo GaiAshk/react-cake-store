@@ -10,10 +10,10 @@ class Product extends Component {
         const {id, title, img, price, inCart} = this.props.product;
         return (
 
-            <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
+            <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-5">
                 <div className="card">
                     <ProductConsumer>
-                        {(value) => (<div className="img-container p-5"
+                        {(value) => (<div className="img-container p-1 mx-auto d-block"
                                           onClick={() => value.handleDetail(id)}>
                             <Link to="/details">
                                 <img src={img} alt="product" className="card-img-top" />
@@ -38,7 +38,7 @@ class Product extends Component {
                             {title}
                         </p>
                         <h5 className="text-blue font-italic mb-0">
-                            <span className="mr-1">$</span> {price}
+                            <span className="mr-1">$</span>{price}
                         </h5>
                     </div>
                 </div>
@@ -64,11 +64,20 @@ const ProductWrapper = styled.div`
 .card{
     border-color: transparent;
     transition: all 1s linear;
+    
+    width: 275px;
+    height: 319px;
+    object-fit: cover;
 }
 .card-footer{
     background: transparent;
     border-top: transparent;
     transition: all 1s linear;
+    
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 &:hover{
     .card{
@@ -76,7 +85,7 @@ const ProductWrapper = styled.div`
         box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
     }
     .card-footer{
-        background: rgba(247, 247, 247);
+        background: rgba(220, 220, 220);
     }
 }
 .img-container{
@@ -100,7 +109,7 @@ const ProductWrapper = styled.div`
     font-size: 1.4rem;
     border-radius: 0.5rem 0rem 0rem 0rem;
     transform: translate(100%, 100%);
-    transition: all 1s linear;
+    transition: all 0.4s linear;
 }
 .img-container:hover .cart-btn{
     transform: translate(0, 0);
