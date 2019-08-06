@@ -18,12 +18,12 @@ class Navbar extends Component {
                     https://www.iconfinder.com/Makoto_msk */}
 
                 {/* Link points to the page we want to go to*/}
-                <Link to="/">
+                <Link to="/products">
                     <img src={logo} alt="store" className="navbar-brand" />
                 </Link>
                 <ul className="navbar-nav align-items-center">
                     <li className="nav-item ml-5">
-                        <Link to="/" className="nav-link">
+                        <Link to="/products" className="nav-link">
                             Products
                         </Link>
                     </li>

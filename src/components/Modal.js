@@ -25,7 +25,7 @@ class Modal extends Component {
                                         <img src={img} className="img-fluid" alt="product"/>
                                         <h5>{title}</h5>
                                         <h5 className="text-muted">price: ${price}</h5>
-                                        <Link to='./'>
+                                        <Link to='./products'>
                                             <ButtonContainer onClick={() => closeModal()}>
                                                 store
                                             </ButtonContainer>
