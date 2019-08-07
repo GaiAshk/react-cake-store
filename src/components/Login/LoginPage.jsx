@@ -5,7 +5,6 @@ import {Register} from "./register";
 export class LoginPage extends Component {
     constructor(props) {
         super(props);
-        console.log(props);
         this.state = {
             isLoginActive: true,
         }
@@ -44,7 +43,6 @@ export class LoginPage extends Component {
 }
 
 const RightSide = props => {
-    console.log(props.current);
     return (
         <div className="right-side" ref={props.containerRef} onClick={props.onClick}>
             <div className="inner-container">
