@@ -2,10 +2,6 @@ import React, {Component} from 'react';
 import {recipe} from "./tempDetails";
 
 export class RecipeDetails extends Component {
-    constructor(props) {
-        super(props);
-
-    }
     state = {
         recipe: recipe,
         url:`https://www.food2fork.com/api/get?key=48548e8373e008b647d7525f1bc631aa&rId=${this.props.id}`,
@@ -14,7 +10,6 @@ export class RecipeDetails extends Component {
     // async await, allows as to preforme actions like they are synchronized (in order)
     // await has to be used inside the async function
     // this runs after the component did mount, so after the component mounted we get the data
-    //
     // async componentDidMount() {
     //     try {
     //         const data = await fetch(this.state.url);
@@ -29,6 +24,8 @@ export class RecipeDetails extends Component {
     // }
 
     render() {
+        if(this.state.recipe === undefined) return <h1 className="text-center text-capitalize mt-5">API key is limited to 50 accesses, please continue later</h1>;
+
         const {image_url, publisher, publisher_url, source_url, title, ingredients} = this.state.recipe;
         const {handleIndex} = this.props;
 

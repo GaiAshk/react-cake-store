@@ -22,7 +22,7 @@ export class RecipePage extends Component {
         try {
             const data = await fetch(this.state.url);
             const jsonData = await data.json();
-            if(jsonData.recipes === undefined || jsonData.recipes.length === 0){
+            if(jsonData.recipes.length === 0){
                 this.setState(() => {
                     return {error: 'sorry, your search did not return any results'}
                 })
@@ -37,10 +37,10 @@ export class RecipePage extends Component {
         }
     }
 
-    // //this runs after the component did mount, so after the component mounted we get the data
-    // componentDidMount() {
-    //     this.getRecipes();
-    // }
+    //this runs after the component did mount, so after the component mounted we get the data
+    componentDidMount() {
+        //this.getRecipes();
+    }
 
     displayPage = (index) => {
       switch(index){

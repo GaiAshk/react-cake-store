@@ -19,6 +19,10 @@ import {LoginPage} from './components/Login/index';
 import './recipes.css'
 import {RecipePage} from './components/Recipes/index'
 
+//Game of Life
+import './components/GameOfLife/gameoflife.css';
+import {GameOfLifePage} from "./components/GameOfLife/GameOfLifePage";
+
 
 class App extends Component {
     state = {};
@@ -60,6 +64,7 @@ const DefaultContainer = () => (
             <Route path="/details" component={Details}/>
             <Route path="/cart" component={Cart}/>
             <Route path="/recipeList" component={RecipePage}/>
+            <Route path="/gameoflife" component={GameOfLifePage}/>
             <Route component={Default}/>
         </Switch>
     </React.Fragment>

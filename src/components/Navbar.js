@@ -27,6 +27,16 @@ class Navbar extends Component {
                             Products
                         </Link>
                     </li>
+                    <li className="nav-item ml-5">
+                        <Link to="/recipeList" className="nav-link">
+                            Recipes
+                        </Link>
+                    </li>
+                    <li className="nav-item ml-5">
+                        <Link to="/gameoflife" className="nav-link">
+                            Game
+                        </Link>
+                    </li>
                 </ul>
                 <Link to="/cart" className="ml-auto">
                     <ButtonContainer>

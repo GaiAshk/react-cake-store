@@ -45,7 +45,7 @@ export class Register extends React.Component{
                             <div className="footer">
 
                             <div className="input-field">
-                                <button className="btn pink lighten-1 z-depth-0">Login</button>
+                                <button className="btn pink lighten-1 z-depth-0">Register</button>
                             </div>
 
                             {/* this was the first log in button, no changing to tutorial button*/}

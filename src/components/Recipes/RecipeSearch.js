@@ -14,10 +14,10 @@ export class RecipeSearch extends Component {
                             </h1>
                             <form className="mt-4" onSubmit={handleSubmit}>
                                 <label htmlFor="search" className="text-capitalize">
-                                    type recipes separated by comma:
+                                    type ingredients separated by comma:
                                 </label>
                                 <div className="input-group">
-                                    <input type="text" name="search" placeholder="chicken, onions, carrots"
+                                    <input type="text" name="search" placeholder="chocolate, vanilla, coffee"
                                            className="form-control" value={value} onChange={handleChange}/>
                                     <div className="input-group-append">
                                         <button type="submit" className="input-group-text bg-primary text-white">
