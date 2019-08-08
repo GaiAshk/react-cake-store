@@ -49,7 +49,6 @@ const LoginContainer = () => {
     return (
         <React.Fragment>
             <Route exact path="/" render={() => <Redirect to="/login" />} />
-            <Route path="/login" component={LoginPage} />
         </React.Fragment>
 
     )

@@ -39,7 +39,7 @@ export class RecipePage extends Component {
 
     //this runs after the component did mount, so after the component mounted we get the data
     componentDidMount() {
-        //this.getRecipes();
+        this.getRecipes();
     }
 
     displayPage = (index) => {

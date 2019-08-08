@@ -2,26 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="620bb65c-4779-450f-85ff-b2838acb5cbf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/GameOfLife/Box.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/GameOfLife/Buttons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/GameOfLife/GameOfLifePage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/GameOfLife/Grid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/GameOfLife/Main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/GameOfLife/gameoflife.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/GameOfLife/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Details.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Details.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/register.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Cart/CartTotals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/CartTotals.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/LoginPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PayPalButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PayPalButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Recipes/RecipeDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipes/RecipeDetails.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recipes/RecipeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipes/RecipeList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Recipes/RecipePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipes/RecipePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recipes/RecipeSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipes/RecipeSearch.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +84,9 @@
       <workItem from="1565163918833" duration="23735000" />
       <workItem from="1565195369650" duration="111000" />
       <workItem from="1565195757743" duration="121000" />
-      <workItem from="1565196339283" duration="8575000" />
+      <workItem from="1565196339283" duration="8661000" />
+      <workItem from="1565250352068" duration="1162000" />
+      <workItem from="1565257165475" duration="3200000" />
     </task>
     <servers />
   </component>

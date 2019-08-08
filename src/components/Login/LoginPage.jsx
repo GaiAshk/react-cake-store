@@ -7,6 +7,7 @@ export class LoginPage extends Component {
         super(props);
         this.state = {
             isLoginActive: true,
+
         }
     }
 

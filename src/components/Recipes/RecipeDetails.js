@@ -10,18 +10,18 @@ export class RecipeDetails extends Component {
     // async await, allows as to preforme actions like they are synchronized (in order)
     // await has to be used inside the async function
     // this runs after the component did mount, so after the component mounted we get the data
-    // async componentDidMount() {
-    //     try {
-    //         const data = await fetch(this.state.url);
-    //         const jsonData = await data.json();
-    //
-    //         this.setState({
-    //             recipe: jsonData.recipe,
-    //         });
-    //     } catch (e) {
-    //         console.log(e);
-    //     }
-    // }
+    async componentDidMount() {
+        try {
+            const data = await fetch(this.state.url);
+            const jsonData = await data.json();
+
+            this.setState({
+                recipe: jsonData.recipe,
+            });
+        } catch (e) {
+            console.log(e);
+        }
+    }
 
     render() {
         if(this.state.recipe === undefined) return <h1 className="text-center text-capitalize mt-5">API key is limited to 50 accesses, please continue later</h1>;

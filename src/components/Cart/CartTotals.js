@@ -30,10 +30,7 @@ export default function CartTotals({value, history}) {
                             <strong>${cartTotal}</strong>
                         </h5>
                         {/* PayPal button */}
-                        <PayPalButton total={cartTotal} clearCart={clearCart} history={history}>
-
-                        </PayPalButton>
-
+                        <PayPalButton total={cartTotal} clearCart={clearCart} history={history} />
                     </div>
                 </div>
             </div>
