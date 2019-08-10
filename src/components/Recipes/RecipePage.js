@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {RecipeList, RecipeDetails} from './index';
+import {RecipeList, RecipeDetails} from './RecipeIndex';
 import {recipes} from './tempList';
 
 export class RecipePage extends Component {
@@ -7,7 +7,7 @@ export class RecipePage extends Component {
         recipes: recipes,
         url: "https://www.food2fork.com/api/search?key=48548e8373e008b647d7525f1bc631aa",
         base_url: "https://www.food2fork.com/api/search?key=48548e8373e008b647d7525f1bc631aa",
-        detail_id: 35382,
+        detail_id: 0,
         pageIndex: 1,
         search: "",
         query: '&q=',

@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
-import {Login} from "./login";
-import {Register} from "./register";
+import {Login} from "./Login";
+import {Register} from "./Register";
 
 export class LoginPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
             isLoginActive: true,
-
         }
     }
 
@@ -25,15 +24,21 @@ export class LoginPage extends Component {
         }))
     }
 
+    updateParent(){
+        this.changeState();
+        console.log(this.props)
+    }
+
     render() {
         const {isLoginActive} = this.state;
+        const appCheckAccess = this.props.grantAccess;
         return (
             <React.Fragment>
                 <div className="App">
                     <div className="login">
                         <div className="container">
-                            {isLoginActive && (<Login containerRef={(ref) => {this.current = ref}} />)}
-                            {!isLoginActive && (<Register containerRef={(ref) => {this.current = ref}}/>)}
+                            {isLoginActive && (<Login updateParent={appCheckAccess} containerRef={(ref) => {this.current = ref}} />)}
+                            {!isLoginActive && (<Register updateParent={this.updateParent.bind(this)} containerRef={(ref) => {this.current = ref}}/>)}
                         </div>
                         <RightSide current={isLoginActive ? "Register" : "Login"} containerRef={ref => this.rightSide = ref} onClick={this.changeState.bind(this)}/>
                     </div>

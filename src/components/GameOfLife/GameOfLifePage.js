@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './gameoflife.css';
-import {Main} from './index'
+import {Main} from './GameOfLifeIndex'
 
 
 export class GameOfLifePage extends Component {

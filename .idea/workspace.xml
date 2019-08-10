@@ -2,15 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="620bb65c-4779-450f-85ff-b2838acb5cbf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Login/Register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/storage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cart/CartTotals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/CartTotals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/LoginPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PayPalButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PayPalButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recipes/RecipeDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipes/RecipeDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Cart/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameOfLife/GameOfLifePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameOfLife/GameOfLifePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameOfLife/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameOfLife/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GameOfLife/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GameOfLife/GameOfLifeIndex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/LoginIndex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/register.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductsList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Recipes/RecipePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipes/RecipePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recipes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipes/RecipeIndex.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +61,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\GuyPc\Downloads\App Development\react-cake-store\src" />
       <recent name="C:\Users\GuyPc\Downloads\App Development\store\src\components\Products" />
       <recent name="C:\Users\GuyPc\Downloads\App Development\store\src\components\Cart" />
     </key>
@@ -87,6 +97,12 @@
       <workItem from="1565196339283" duration="8661000" />
       <workItem from="1565250352068" duration="1162000" />
       <workItem from="1565257165475" duration="3200000" />
+      <workItem from="1565279385063" duration="569000" />
+      <workItem from="1565279997716" duration="1384000" />
+      <workItem from="1565283217578" duration="414000" />
+      <workItem from="1565337565925" duration="10912000" />
+      <workItem from="1565373624063" duration="1591000" />
+      <workItem from="1565445199956" duration="20606000" />
     </task>
     <servers />
   </component>

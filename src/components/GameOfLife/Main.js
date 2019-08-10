@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './gameoflife.css';
-import {Grid, Buttons} from './index'
+import {Grid, Buttons} from './GameOfLifeIndex'
 
 export class Main extends Component {
    constructor() {
