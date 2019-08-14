@@ -35,7 +35,7 @@ export class Login extends React.Component{
                        signInError: json.message,
                        isLoading: false,
                    });
-                   this.props.updateParent(json.token);
+                   this.props.updateParent(json.token, json.JWTtoken, json.userId);
                } else {
                    this.setState({
                        signInError: json.message,
@@ -49,7 +49,8 @@ export class Login extends React.Component{
     render() {
         return (
             <div className="base-container" ref={this.props.containerRef}>
-                <div className="header">LogIn</div>
+                <div className="header"> Special Cakes</div>
+                <div className="header">-LogIn-</div>
                 <div className="content">
                     <div className="image">
                         <img src={loginImg} alt="" />

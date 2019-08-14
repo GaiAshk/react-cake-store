@@ -51,7 +51,7 @@ export class LoginPage extends Component {
 const RightSide = props => {
     return (
         <div className="right-side" ref={props.containerRef} onClick={props.onClick}>
-            <div className="inner-container">
+            <div className="inner-container text-right">
                 <div className="div text">{props.current}</div>
             </div>
         </div>

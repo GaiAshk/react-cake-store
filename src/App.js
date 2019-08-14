@@ -26,28 +26,56 @@ import {GameOfLifePage} from "./components/GameOfLife/GameOfLifePage";
 
 class App extends Component {
     state = {
-       //access shuold be false, for production
-       access: true,
+       //access should be false, for production
+       access: false,
+       //should be false for production
+       isVerified: false,
        token: '',
+       JWTtoken: '',
+       adminToken: '5d516bfe2370fe2f48829038',
+       userId: '',
     };
 
-   updateParentfromLogIN(token) {
+   updateParentFromLogIN(token, JWTtoken, userId) {
       this.setState({
          access: true,
          token: token,
+         JWTtoken: JWTtoken,
+         userId: userId,
       });
    }
 
+   updateCookies(JWTtoken){
+      this.setState({
+         JWTtoken: JWTtoken
+      })
+   }
+
+   jumpToLogIn() {
+      this.setState({
+         access: false,
+      });
+   }
+
+   logOut(){
+      this.setState({
+         access: false,
+         isVerified: false,
+         JWTtoken: '',
+      })
+   }
+
     render() {
+
       if(!this.state.access){
          return (
             <React.Fragment>
-               {/* the Route searches if the path matches and if it does it displaies the component
+               {/* the Route searches if the path matches and if it does it displays the component
               the Switch iterates over all Routes*/}
                <Switch>
-                  {/* exact makes the path match the exact path, and not only the begining as the defult does*/}
+                  {/* exact makes the path match the exact path, and not only the beginning as the default does*/}
                   <Route exact path="/" component={LoginContainer}/>
-                  <Route exact path="/login" render={() => (<LoginPage grantAccess={this.updateParentfromLogIN.bind(this)} state={this.state} />) }/>
+                  <Route exact path="/login" render={() => (<LoginPage grantAccess={this.updateParentFromLogIN.bind(this)} state={this.state} />) }/>
                   <Route component={Default}/>
                </Switch>
             </React.Fragment>
@@ -55,15 +83,15 @@ class App extends Component {
       } else {
          return(
                <React.Fragment>
-                  <Navbar />
+                  <Navbar admin={this.state.userId} logout={this.logOut()}/>
                   <Switch>
                      <Route exact path="/login" component={DefaultRedirect}/>
-                     <Route exact path="/products" render={() => (<ProductList state={this.state}/>)} />
-                     <Route exact path="/details" component={Details}/>
-                     <Route exact path="/cart" component={Cart}/>
-                     <Route exact path="/recipeList" component={RecipePage}/>
-                     <Route exact path="/gameoflife" component={GameOfLifePage}/>
-                     <Route component={Default}/>
+                     <Route exact path="/products" render={() => (<ProductList updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
+                     <Route exact path="/details" render={() => (<Details updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
+                     <Route exact path="/cart" render={() => (<Cart updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
+                     <Route exact path="/recipeList" render={() => (<RecipePage updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
+                     <Route exact path="/gameoflife" render={() => (<GameOfLifePage updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
+                     <Route render={() => (<Default updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
                   </Switch>
                   {/*model is outside switch because we are not doing routing to it we only display it */}
                   <Modal/>

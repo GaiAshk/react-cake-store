@@ -9,6 +9,9 @@ import {ButtonContainer} from './Button';
 
 
 class Navbar extends Component {
+    state = {
+      isAdmin: (this.props.admin === undefined)? false : (this.props.admin === '5d516bfe2370fe2f48829038')? true : false,
+    };
     render() {
         return (
             <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
@@ -35,6 +38,17 @@ class Navbar extends Component {
                     <li className="nav-item ml-5">
                         <Link to="/gameoflife" className="nav-link">
                             Game
+                        </Link>
+                    </li>
+                    {this.state.isAdmin && <li className="nav-item ml-5">
+                        <Link to="/admin" className="nav-link">
+                            Admin
+                        </Link>
+                    </li>
+                    }
+                    <li className="nav-item ml-5">
+                        <Link to="/" className="nav-link">
+                            Log Out
                         </Link>
                     </li>
                 </ul>

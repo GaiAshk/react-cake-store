@@ -4,7 +4,7 @@ import {RecipeSearch} from './RecipeSearch'
 
 export class RecipeList extends Component {
     render() {
-        const { recipes, handleDetails, value, handleChange, handleSubmit, error } = this.props;
+        const { recipes, handleDetails, value, handleChange, handleSubmit, error, handleIndex } = this.props;
         return (
             <React.Fragment>
                 <RecipeSearch value={value} handleChange={handleChange} handleSubmit={handleSubmit}/>
@@ -23,7 +23,7 @@ export class RecipeList extends Component {
                                 // limit of 50 accesses per day
                                 if(i < 6) {
                                     i++;
-                                    return(<Recipe key={recipe.recipe_id} recipe={recipe} handleDetails={handleDetails} />)
+                                    return(<Recipe key={recipe.recipe_id} recipe={recipe} handleIndex={handleIndex} handleDetails={handleDetails} />)
                                 } else {
                                     return null;
                                 }

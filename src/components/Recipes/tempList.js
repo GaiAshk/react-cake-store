@@ -11,18 +11,18 @@ export const recipes = [
   {
     recipe_id: 35383,
     image_url:
-      "http://static.food2fork.com/Jalapeno2BPopper2BGrilled2BCheese2BSandwich2B12B500fd186186.jpg",
-    title: "Jalapeno Popper Grilled Cheese Sandwich",
-    publisher: "Closet Cooking",
+      "https://static.food2fork.com/icedcoffee5766.jpg",
+    title: "Perfect Iced Coffee",
+    publisher: "The Pioneer Woman",
     source_url:
       "http://www.closetcooking.com/2011/04/jalapeno-popper-grilled-cheese-sandwich.html"
   },
   {
     recipe_id: 35384,
     image_url:
-      "http://static.food2fork.com/Jalapeno2BPopper2BGrilled2BCheese2BSandwich2B12B500fd186186.jpg",
-    title: "Jalapeno Popper Grilled Cheese Sandwich",
-    publisher: "Closet Cooking",
+      "https://static.food2fork.com/CrashHotPotatoes5736.jpg",
+    title: "Crash Hot Potatoes",
+    publisher: "The Pioneer Woman",
     source_url:
       "http://www.closetcooking.com/2011/04/jalapeno-popper-grilled-cheese-sandwich.html"
   }
