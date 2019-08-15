@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import SessionExpired from "./SessionExpired";
+import SessionExpired from "../SessionExpired";
 
 class Default extends Component {
     state = {
@@ -10,33 +10,34 @@ class Default extends Component {
     };
 
     componentDidMount() {
-        const token = (this.props.state === undefined)? false : this.props.state.token;
-        if(token){
-            //verify the token
-            fetch("http://localhost:3001/users/verify?token=" + token, {method: 'GET', headers:{'auth-token': this.state.JWTtoken}})
-               .then(res => res.json())
-               .then(json => {
-                   console.log(json);
-                   if(json.success){
-                       this.setState({
-                           token: token,
-                           isVerified: true,
-                           JWTtoken: json.JWTtoken,
-                       });
-                       this.props.updateCookies(json.JWTtoken);
-                       console.log(this.state);
-                   } else {
-                       this.setState({
-                           isVerified: false,
-                       })
-                   }
-               })
-               .then(() => this.setState({isLoading: false,}))
-        } else {
-            this.setState({
-                isLoading: false,
-            })
-        }
+        // const token = (this.props.state === undefined)? false : this.props.state.token;
+        // if(token){
+        //     //verify the token
+        //     fetch("http://localhost:3001/users/verify?token=" + token, {method: 'GET', headers:{'auth-token': this.state.JWTtoken}})
+        //        .then(res => res.json())
+        //        .then(json => {
+        //            console.log(json);
+        //            if(json.success){
+        //                this.setState({
+        //                    token: token,
+        //                    isVerified: true,
+        //                    JWTtoken: json.JWTtoken,
+        //                });
+        //                this.props.updateCookies(json.JWTtoken);
+        //                console.log(this.state);
+        //            } else {
+        //                this.setState({
+        //                    isVerified: false,
+        //                })
+        //            }
+        //        })
+        //        .then(() => this.setState({isLoading: false,}))
+        // } else {
+        //     this.setState({
+        //         isLoading: false,
+        //     })
+        // }
+        this.setState({isLoading: false})
     }
 
     render() {

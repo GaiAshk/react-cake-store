@@ -4,14 +4,33 @@ import {Link} from 'react-router-dom';
 import logo from '../logo.svg';
 import styled from 'styled-components';
 //when improt is in {???} it is a specific import, if it is not then default import, which imports the whole page
-import {ButtonContainer} from './Button';
+import {ButtonContainer} from './Store/Button';
 
 
 
 class Navbar extends Component {
     state = {
       isAdmin: (this.props.admin === undefined)? false : (this.props.admin === '5d516bfe2370fe2f48829038')? true : false,
+        token: (this.props.token === undefined)? '' : this.props.token,
     };
+
+    logOut = async () => {
+        if(this.state.token) {
+          await fetch("http://localhost:3001/users/logout?token" + this.state.token, { method: "GET", headers: {'Content-Type': 'application/json'},
+            }).then(res => res.json())
+               .then(json => {
+                   console.log(json);
+                   if(json.success){
+                       this.props.logOutButton();
+                   } else {
+                       alert(json.message);
+                   }
+               });
+        } else {
+            this.props.logOutButton();
+        }
+    };
+
     render() {
         return (
             <NavWrapper className="navbar navbar-expand-sm navbar-dark px-sm-5">
@@ -35,6 +54,11 @@ class Navbar extends Component {
                             Recipes
                         </Link>
                     </li>
+                   <li className="nav-item ml-5">
+                      <Link to="/createRecipe" className="nav-link">
+                         My Recipes
+                      </Link>
+                   </li>
                     <li className="nav-item ml-5">
                         <Link to="/gameoflife" className="nav-link">
                             Game
@@ -47,8 +71,10 @@ class Navbar extends Component {
                     </li>
                     }
                     <li className="nav-item ml-5">
-                        <Link to="/" className="nav-link">
-                            Log Out
+                        <Link to='/' className="nav-link">
+                            <button className="log-out" onClick={this.logOut.bind(this)}>
+                                Log Out
+                            </button>
                         </Link>
                     </li>
                 </ul>

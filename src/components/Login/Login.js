@@ -23,7 +23,8 @@ export class Login extends React.Component{
 
     handleSubmit = e => {
         e.preventDefault();
-        fetch("http://localhost:3001/users/signin/", { method: "POST", headers: {'Content-Type': 'application/json', 'Accept': 'application/json'}, body: JSON.stringify({
+        fetch("http://localhost:3001/users/signin/", { method: "POST", headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+            body: JSON.stringify({
                 username: this.state.username,
                 password: this.state.password,
             }),

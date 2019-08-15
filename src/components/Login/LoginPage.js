@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {Login} from "./Login";
 import {Register} from "./Register";
+import logo from "../../logo.svg";
+import styled from "styled-components";
 
 export class LoginPage extends Component {
     constructor(props) {
@@ -34,6 +36,10 @@ export class LoginPage extends Component {
         const appCheckAccess = this.props.grantAccess;
         return (
             <React.Fragment>
+                <DivWrapper className="expand-sm py-3 mb-5 px-sm-5">
+                    <img src={logo} alt="store" className="navbar-brand" />
+                </DivWrapper>
+
                 <div className="App">
                     <div className="login">
                         <div className="container">
@@ -56,3 +62,19 @@ const RightSide = props => {
             </div>
         </div>
     )};
+
+const DivWrapper = styled.nav`
+position: absolute;
+top: 0;
+width: 100%;
+z-index: 2;
+background: var(--mainBlue);
+.nav-link{
+    color: var(--mainWhite) !important;
+    
+    // 1 rem is 16px, we use rem because rem is responsive, if we change screens rem still will look the same
+    font-size: 1.3rem;
+    
+    text-transform: capitalize;
+}
+`;

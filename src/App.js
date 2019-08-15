@@ -4,11 +4,11 @@ import {Switch, Route} from "react-router-dom";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar';
-import ProductList from './components/ProductsList';
-import Details from './components/Details';
+import ProductList from './components/Store/ProductsList';
+import Details from './components/Store/Details';
 import Cart from './components/Cart/Cart';
-import Default from './components/Default';
-import Modal from './components/Modal';
+import Default from './components/Store/Default';
+import Modal from './components/Store/Modal';
 import { Redirect } from 'react-router-dom';
 
 //Log in
@@ -23,8 +23,12 @@ import {RecipePage} from './components/Recipes/RecipeIndex'
 import './components/GameOfLife/gameoflife.css';
 import {GameOfLifePage} from "./components/GameOfLife/GameOfLifePage";
 
+//Create Recipe Page
+import CreateRecipesPage from "./components/CreateRecipes/CreateRecipesPage";
+
 
 class App extends Component {
+
     state = {
        //access should be false, for production
        access: false,
@@ -57,13 +61,13 @@ class App extends Component {
       });
    }
 
-   logOut(){
-      this.setState({
+   logOut = async () => {
+      await this.setState({
          access: false,
          isVerified: false,
          JWTtoken: '',
-      })
-   }
+      });
+   };
 
     render() {
 
@@ -83,13 +87,14 @@ class App extends Component {
       } else {
          return(
                <React.Fragment>
-                  <Navbar admin={this.state.userId} logout={this.logOut()}/>
+                  <Navbar token={this.state.token} admin={this.state.userId} logOutButton={this.logOut.bind(this)}/>
                   <Switch>
                      <Route exact path="/login" component={DefaultRedirect}/>
                      <Route exact path="/products" render={() => (<ProductList updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
                      <Route exact path="/details" render={() => (<Details updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
                      <Route exact path="/cart" render={() => (<Cart updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
                      <Route exact path="/recipeList" render={() => (<RecipePage updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
+                     <Route exact path="/createRecipe" render={() => (<CreateRecipesPage updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
                      <Route exact path="/gameoflife" render={() => (<GameOfLifePage updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
                      <Route render={() => (<Default updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
                   </Switch>

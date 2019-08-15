@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import Product from './Product';
 import Title from './Title';
-import {ProductConsumer} from "../context";
-import SessionExpired from './SessionExpired'
+import {ProductConsumer} from "../../context";
+import SessionExpired from '../SessionExpired'
 
 class ProductsList extends Component {
     state = {
         isLoading: true,
-        isVerified: (this.props.state === undefined)? false : this.props.state.isVerified,
+        isVerified: false,
         token: '',
         JWTtoken: (this.props.state === undefined)? '' : this.props.state.JWTtoken,
     };
@@ -27,7 +27,6 @@ class ProductsList extends Component {
                            JWTtoken: json.JWTtoken,
                        });
                        this.props.updateCookies(json.JWTtoken);
-                       console.log(this.state);
                    } else {
                        this.setState({
                            isVerified: false,

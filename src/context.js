@@ -23,6 +23,21 @@ class ProductProvider extends Component {
     //fix started
     componentDidMount() {
         this.setProducts();
+
+        if ( (localStorage.getItem('cart') === null) || (localStorage.getItem('cartSubTotal' === null)) ||
+           ( localStorage.getItem('cartTotal') === null ) || ( ( localStorage.getItem('cartTax') === null )) ){
+            localStorage.setItem('cart', JSON.stringify(this.state.cart));
+            localStorage.setItem('cartSubTotal', JSON.stringify(this.state.cartSubTotal));
+            localStorage.setItem('cartTax', JSON.stringify(this.state.cartTax));
+            localStorage.setItem('cartTotal', JSON.stringify(this.state.cartTotal));
+        } else {
+            this.setState({
+                cart: JSON.parse(localStorage.getItem('cart')),
+                cartSubTotal: JSON.parse((localStorage.getItem('cartSubTotal'))),
+                cartTotal: JSON.parse((localStorage.getItem('cartTotal'))),
+                cartTax: JSON.parse((localStorage.getItem('cartTax')))
+            });
+        }
     }
 
     setProducts = () => {
@@ -60,6 +75,7 @@ class ProductProvider extends Component {
         this.setState(()=> {
             return {product: tempProducts, cart: [...this.state.cart, product] };
         }, ()=> {this.addTotals()});
+        localStorage.setItem('cart', JSON.stringify(this.state.cart));
     };
 
     openModal = (id) => {
@@ -87,6 +103,7 @@ class ProductProvider extends Component {
 
         this.setState(() => {return{cart: [...tempCart]}},
             ()=> {this.addTotals()})
+        localStorage.setItem('cart', JSON.stringify(this.state.cart));
     };
 
     decrement = (id) => {
@@ -103,6 +120,7 @@ class ProductProvider extends Component {
             product.total = product.price * product.count;
             this.setState(() => {return{cart: [...tempCart]}},
                 ()=> {this.addTotals()})
+            localStorage.setItem('cart', JSON.stringify(this.state.cart));
         }
     };
 
@@ -126,6 +144,7 @@ class ProductProvider extends Component {
         }, () => {
             this.addTotals();
         })
+        localStorage.setItem('cart', JSON.stringify(this.state.cart));
     };
 
     clearCart = () => {
@@ -135,6 +154,11 @@ class ProductProvider extends Component {
             this.setProducts();
             this.addTotals();
             });
+        localStorage.removeItem('cart');
+        localStorage.removeItem('cartSubTotal');
+        localStorage.removeItem('cartTotal');
+        localStorage.removeItem('cartTax');
+
     };
 
     addTotals = () => {
@@ -149,7 +173,11 @@ class ProductProvider extends Component {
                 cartTax: tax,
                 cartTotal: total
             }
-        });
+        },() => {
+            localStorage.setItem('cartSubTotal', JSON.stringify(this.state.cartSubTotal));
+            localStorage.setItem('cartTax', JSON.stringify(this.state.cartTax));
+            localStorage.setItem('cartTotal', JSON.stringify(this.state.cartTotal));
+        } );
     };
 
 
