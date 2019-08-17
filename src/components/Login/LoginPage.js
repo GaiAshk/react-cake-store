@@ -28,7 +28,6 @@ export class LoginPage extends Component {
 
     updateParent(){
         this.changeState();
-        console.log(this.props)
     }
 
     render() {

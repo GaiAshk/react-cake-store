@@ -35,8 +35,10 @@ export class Login extends React.Component{
                    this.setState({
                        signInError: json.message,
                        isLoading: false,
-                   });
-                   this.props.updateParent(json.token, json.JWTtoken, json.userId);
+                   }, () => {
+                       this.props.updateParent(json.token, json.JWTtoken, json.userId);
+                       localStorage.setItem('token', json.token);
+                   })
                } else {
                    this.setState({
                        signInError: json.message,

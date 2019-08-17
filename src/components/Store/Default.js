@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
-import SessionExpired from "../SessionExpired";
 
 class Default extends Component {
     state = {
         isLoading: true,
-        isVerified: (this.props.state === undefined)? false : this.props.state.isVerified,
         token: '',
         JWTtoken: (this.props.state === undefined)? '' : this.props.state.JWTtoken,
     };
@@ -37,29 +35,25 @@ class Default extends Component {
         //         isLoading: false,
         //     })
         // }
-        this.setState({isLoading: false})
+        this.setState({isLoading: false});
+        console.log("mounting in Defult");
     }
 
     render() {
-        const {isLoading, isVerified} = this.state;
-        const {jumpToLogIn} = this.props;
+        const {isLoading} = this.state;
 
         if (isLoading) {
             return (
                <div><p>Loading...</p></div>
             )
         } else {
-
-            if (!isVerified) {
-                return <SessionExpired jumpToLogIn={jumpToLogIn}/>
-            }
             return (
                <div className="container">
                    <div className="row">
                        <div className="col-10 mx-auto text-center text-uppercase mt-4">
                            <h1 className="display-3"> 404 error </h1>
                            <h3 className="mt-4 text-center text-blue">the requested URL
-                               <span className="text-danger"> {this.props.location.pathname} </span>
+                               <span> </span>
                                was not found</h3>
                            <h3 className="mt-4 text-center text-blue">you must be logged in to use the site </h3>
                        </div>

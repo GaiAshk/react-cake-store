@@ -11,6 +11,7 @@ export class RecipePage extends Component {
         detail_id: 0,
         pageIndex: 1,
         search: "",
+        searches: [],
         query: '&q=',
         error: '',
         isLoading: true,
@@ -35,7 +36,6 @@ export class RecipePage extends Component {
                        });
                        this.props.updateCookies(json.JWTtoken);
                        this.getRecipes();
-                       console.log(this.state);
                    } else {
                        this.setState({
                            isVerified: false,
@@ -50,9 +50,25 @@ export class RecipePage extends Component {
         }
     }
 
+    updateDB() {
+        const token = localStorage.getItem('token')? localStorage.getItem('token') : false;
+        if(token) {
+            fetch("http://localhost:3001/users/searches?token=" + token, {
+                   method: "POST", headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+                   body: JSON.stringify({
+                       searches: this.state.searches,
+                   })
+               }
+            ).then(res => res.json())
+               .then(json => {
+                   console.log(json);
+               });
+        }
+
+    }
+
     //async await, allows as to preforme actions like they are synchronized (in order)
     //await has to be used inside the async function
-
     async getRecipes() {
         try {
             const data = await fetch(this.state.url);
@@ -101,7 +117,6 @@ export class RecipePage extends Component {
         window.scrollTo(500, 0);
     };
 
-
     handleChange = (e) => {
         this.setState({
             search: e.target.value,
@@ -110,13 +125,16 @@ export class RecipePage extends Component {
 
     handleSubmit = (e) => {
       e.preventDefault();
-      const {base_url, query, search} = this.state;
+      const {base_url, query, search, searches} = this.state;
       this.setState(() => {
           return {
+              searches: [...searches, search],
               url: `${base_url}${query}${search}`,
               search: "",
           }}, () => {
            this.getRecipes();
+           console.log(this.state);
+           this.updateDB();
           }
       )
     };

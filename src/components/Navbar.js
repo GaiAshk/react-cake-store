@@ -14,10 +14,12 @@ class Navbar extends Component {
         token: (this.props.token === undefined)? '' : this.props.token,
     };
 
-    logOut = async () => {
-        if(this.state.token) {
-          await fetch("http://localhost:3001/users/logout?token" + this.state.token, { method: "GET", headers: {'Content-Type': 'application/json'},
-            }).then(res => res.json())
+    logOut() {
+       const token = this.state.token;
+
+        if(token) {
+          fetch("http://localhost:3001/users/logout?token=" + token, { method: "GET"}
+          ).then(res => res.json())
                .then(json => {
                    console.log(json);
                    if(json.success){

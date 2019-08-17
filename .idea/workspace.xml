@@ -2,24 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="620bb65c-4779-450f-85ff-b2838acb5cbf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/CreateRecipes/CreateRecipesPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Admin/AdminScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Admin/Table.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Store/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cart/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/Cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cart/CartTotals.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cart/CartTotals.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Store/Default.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Details.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Store/Details.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CreateRecipes/CreateRecipesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CreateRecipes/CreateRecipesPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Login/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/LoginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Store/Modal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PayPalButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Store/PayPalButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Store/Product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProductsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Store/ProductsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Title.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Store/Title.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recipes/RecipePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recipes/RecipePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Store/Default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Store/Default.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Store/ProductsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Store/ProductsList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/context.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +43,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../express-backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -61,6 +58,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\GuyPc\Downloads\App Development\react-cake-store\src\components\Admin" />
       <recent name="C:\Users\GuyPc\Downloads\App Development\react-cake-store\src\components\Store" />
       <recent name="C:\Users\GuyPc\Downloads\App Development\react-cake-store\src" />
       <recent name="C:\Users\GuyPc\Downloads\App Development\store\src\components\Products" />
@@ -111,6 +109,11 @@
       <workItem from="1565771522210" duration="9287000" />
       <workItem from="1565792480525" duration="16609000" />
       <workItem from="1565852512517" duration="20795000" />
+      <workItem from="1565881492783" duration="10640000" />
+      <workItem from="1565937510428" duration="13738000" />
+      <workItem from="1565971279939" duration="3190000" />
+      <workItem from="1566031371984" duration="21210000" />
+      <workItem from="1566071690450" duration="5256000" />
     </task>
     <servers />
   </component>

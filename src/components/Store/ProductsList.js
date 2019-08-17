@@ -14,6 +14,7 @@ class ProductsList extends Component {
 
     componentDidMount() {
         const token = (this.props.state === undefined)? false : this.props.state.token;
+
         if(token){
             //verify the token
             fetch("http://localhost:3001/users/verify?token=" + token, {method: 'GET', headers:{'auth-token': this.state.JWTtoken}})
@@ -63,6 +64,7 @@ class ProductsList extends Component {
                            <div className="row">
                                <ProductConsumer>
                                    {value => {
+
                                        return (
                                           value.products.map(product => {
                                               if (product.id < 5) {

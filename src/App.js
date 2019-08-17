@@ -1,4 +1,4 @@
-// main project
+// store
 import React, {Component} from 'react';
 import {Switch, Route} from "react-router-dom";
 import './App.css';
@@ -10,6 +10,7 @@ import Cart from './components/Cart/Cart';
 import Default from './components/Store/Default';
 import Modal from './components/Store/Modal';
 import { Redirect } from 'react-router-dom';
+import SessionExpired from "./components/SessionExpired";
 
 //Log in
 import './App.scss';
@@ -25,6 +26,7 @@ import {GameOfLifePage} from "./components/GameOfLife/GameOfLifePage";
 
 //Create Recipe Page
 import CreateRecipesPage from "./components/CreateRecipes/CreateRecipesPage";
+import AdminScreen from "./components/Admin/AdminScreen";
 
 
 class App extends Component {
@@ -39,6 +41,7 @@ class App extends Component {
        adminToken: '5d516bfe2370fe2f48829038',
        userId: '',
     };
+
 
    updateParentFromLogIN(token, JWTtoken, userId) {
       this.setState({
@@ -61,8 +64,8 @@ class App extends Component {
       });
    }
 
-   logOut = async () => {
-      await this.setState({
+   logOut = () => {
+      this.setState({
          access: false,
          isVerified: false,
          JWTtoken: '',
@@ -80,7 +83,7 @@ class App extends Component {
                   {/* exact makes the path match the exact path, and not only the beginning as the default does*/}
                   <Route exact path="/" component={LoginContainer}/>
                   <Route exact path="/login" render={() => (<LoginPage grantAccess={this.updateParentFromLogIN.bind(this)} state={this.state} />) }/>
-                  <Route component={Default}/>
+                  <Route render={() => (<SessionExpired jumpToLogIn={this.jumpToLogIn.bind(this)} /> )}/>
                </Switch>
             </React.Fragment>
          );
@@ -96,6 +99,7 @@ class App extends Component {
                      <Route exact path="/recipeList" render={() => (<RecipePage updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
                      <Route exact path="/createRecipe" render={() => (<CreateRecipesPage updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
                      <Route exact path="/gameoflife" render={() => (<GameOfLifePage updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
+                     <Route exact path="/admin" render={() => (<AdminScreen updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
                      <Route render={() => (<Default updateCookies={this.updateCookies.bind(this)} jumpToLogIn={this.jumpToLogIn.bind(this)} state={this.state}/>)} />
                   </Switch>
                   {/*model is outside switch because we are not doing routing to it we only display it */}
