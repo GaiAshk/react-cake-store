@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="620bb65c-4779-450f-85ff-b2838acb5cbf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Admin/readme.html.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Admin/AdminScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/AdminScreen.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +22,7 @@
       <list>
         <option value="package.json" />
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -27,6 +32,7 @@
   </component>
   <component name="ProjectId" id="1P6XvhLJVLXx4YRSIemuVGJ73zo" />
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -101,6 +107,9 @@
       <workItem from="1566031371984" duration="21210000" />
       <workItem from="1566071690450" duration="5256000" />
       <workItem from="1566117755213" duration="4328000" />
+      <workItem from="1566127000289" duration="5211000" />
+      <workItem from="1566141088856" duration="7153000" />
+      <workItem from="1566149240201" duration="1492000" />
     </task>
     <servers />
   </component>

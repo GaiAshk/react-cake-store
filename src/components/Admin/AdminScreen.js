@@ -7,15 +7,19 @@ class AdminScreen extends Component {
    state = {
       sessions: [],
       currentSessions: [],
+      token: (this.props.token === undefined)? '' : this.props.token,
+      admin: this.props.admin,
    };
 
    componentDidMount() {
-      fetch("http://localhost:3001/users/alldata", {method: 'GET', headers:{'Content-Type': 'application/json'}})
+      //here token is the admin token (in DB this is userID)
+      const token = this.state.admin;
+      fetch("http://localhost:3001/users/alldata?token=" + token, {method: 'GET', headers:{'Content-Type': 'application/json'}})
          .then(res => res.json())
          .then(json => {
             this.setState({
-               currentSessions: json,
-               sessions: json,
+               currentSessions: json.data,
+               sessions: json.data,
             });
          })
    }
