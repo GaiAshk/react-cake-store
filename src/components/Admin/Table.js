@@ -12,9 +12,9 @@ const row = (x, i) => (
          <TableRow key={`tr-${i}`}>
                <TableRowColumn> {x.userId} </TableRowColumn>
                <TableRowColumn> {x.userName} </TableRowColumn>
-               <TableRowColumn> <ol> {x.myRecipes.map((y, k) => ( <li> {y.recipeName} </li> ))} </ol> </TableRowColumn>
-            <TableRowColumn> <ol> {x.searches.map((y) => <li> {y} </li>)} </ol> </TableRowColumn>
-               <TableRowColumn> <ol> {x.cart.map((y) => (<li> {y.title} </li> ))} </ol> </TableRowColumn>
+               <TableRowColumn> <ol> {x.myRecipes.map((y, k) => ( <li key={`tc-${k}`}> {y.recipeName} </li> ))} </ol> </TableRowColumn>
+            <TableRowColumn> <ol> {x.searches.map((y, k) => <li key={`tc1-${k}`}> {y} </li>)} </ol> </TableRowColumn>
+               <TableRowColumn> <ol> {x.cart.map((y, k) => (<li key={`tc2-${k}`}> {y.title} </li> ))} </ol> </TableRowColumn>
          </TableRow>
 );
 

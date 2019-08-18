@@ -33,7 +33,7 @@ class App extends Component {
 
     state = {
        //access should be false, for production
-       access: false,
+       access: true,
        //should be false for production
        isVerified: false,
        token: '',
@@ -49,6 +49,7 @@ class App extends Component {
          token: token,
          JWTtoken: JWTtoken,
          userId: userId,
+         isVerified: true,
       });
    }
 

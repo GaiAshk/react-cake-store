@@ -1,38 +1,48 @@
 import React, {Component} from 'react';
 import Table from './Table';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-// import injectTapEventPlugin from 'react-tap-event-plugin';
-
-// injectTapEventPlugin();
 
 
 class AdminScreen extends Component {
    state = {
       sessions: [],
-      currentSession: [],
+      currentSessions: [],
    };
 
    componentDidMount() {
       fetch("http://localhost:3001/users/alldata", {method: 'GET', headers:{'Content-Type': 'application/json'}})
          .then(res => res.json())
          .then(json => {
-            this.setState({sessions: json});
+            this.setState({
+               currentSessions: json,
+               sessions: json,
+            });
          })
    }
 
+   updateCurrentSessions(user){
+      this.setState({
+         currentSessions: [user],
+      })
+   }
+
+   displayAllUsers(){
+      this.setState({
+         currentSessions: this.state.sessions,
+      })
+   }
 
    render() {
-      const {sessions} = this.state;
-      if(sessions.length === 0){
+      const {sessions, currentSessions} = this.state;
+      if(currentSessions.length === 0){
          return (<h1>Now UserSessions Active</h1>)
       }
       return (
-         <div>
-            <ol>
-               {sessions.map((user) => (
-                     <button key={user}> {user.userName} </button>
+         <div className="container">
+            <button className="m-3" key="allUsers" onClick={(e) => this.displayAllUsers()}> All Users </button>
+               {sessions.map((user, i) => (
+                     <button className="btn pink lighten-1 z-depth-0 m-2" key={i} onClick={(e) => this.updateCurrentSessions(user)}> {user.userName} </button>
                ))}
-            </ol>
             <MuiThemeProvider>
             <Table header={[
                { name: 'UserID', prop: "userId"},
@@ -40,7 +50,7 @@ class AdminScreen extends Component {
                {name: 'Recipes', prop: "myRecipes"},
                {name: 'Searches', prop: "searches"},
                {name: 'CartItems', prop: "cart"}
-               ]} data={this.state.sessions}/>
+               ]} data={this.state.currentSessions}/>
             </MuiThemeProvider>
          </div>
       );

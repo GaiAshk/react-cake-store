@@ -35,8 +35,7 @@ class Default extends Component {
         //         isLoading: false,
         //     })
         // }
-        this.setState({isLoading: false});
-        console.log("mounting in Defult");
+        setTimeout(this.setState({isLoading: false}), 1000);
     }
 
     render() {

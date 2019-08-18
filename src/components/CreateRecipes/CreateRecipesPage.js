@@ -68,7 +68,7 @@ class CreateRecipesPage extends Component {
       currentIndex: 0,
       newestRecipe: {recipeName: '', ingredients: [], directions: ''},
       isLoading: true,
-      isVerified: false,
+      isVerified: (this.props.state === undefined)? false : this.props.state.isVerified,
       token: '',
       JWTtoken: (this.props.state === undefined)? '' : this.props.state.JWTtoken,
    };
