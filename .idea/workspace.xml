@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="620bb65c-4779-450f-85ff-b2838acb5cbf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/AdminScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/AdminScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Admin/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Admin/Table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CreateRecipes/CreateRecipesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CreateRecipes/CreateRecipesPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CreateRecipes/cheese.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CreateRecipes/chocolate.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CreateRecipes/vanila.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Store/Default.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Store/Default.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +100,7 @@
       <workItem from="1565971279939" duration="3190000" />
       <workItem from="1566031371984" duration="21210000" />
       <workItem from="1566071690450" duration="5256000" />
-      <workItem from="1566117755213" duration="4307000" />
+      <workItem from="1566117755213" duration="4328000" />
     </task>
     <servers />
   </component>
